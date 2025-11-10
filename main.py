@@ -24,7 +24,8 @@ st.set_page_config(
 def les_shapefil(filepath):
     """Leser shapefil og returnerer GeoDataFrame"""
     try:
-        gdf = gpd.read_file(filepath)
+        # Bruk pyogrio engine eksplisitt
+        gdf = gpd.read_file(filepath, engine='pyogrio')
 
         # Prosjiser til WGS84 for webkart
         if gdf.crs and gdf.crs != 'EPSG:4326':
@@ -34,7 +35,6 @@ def les_shapefil(filepath):
     except Exception as e:
         st.error(f"Kunne ikke lese shapefil: {e}")
         return None
-
 
 @st.cache_data
 def generer_tilfeldig_od_data(områder_liste):
