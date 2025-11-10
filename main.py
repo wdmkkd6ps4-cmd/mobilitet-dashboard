@@ -8,7 +8,7 @@ import json
 # ============================================================================
 # KONFIGURASJON - ENDRE DENNE STIEN TIL DIN SHAPEFIL
 # ============================================================================
-SHAPEFIL_PATH = "Shape/Delområder.shp"
+SHAPEFIL_PATH = "Shape/delomrader.shp"
 NAVN_FELT = "delomraden"  # Feltet som inneholder områdenavn
 # ============================================================================
 
