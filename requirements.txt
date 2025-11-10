@@ -2,5 +2,5 @@ streamlit>=1.28.0
 plotly>=5.17.0
 pandas>=2.0.0
 geopandas==0.14.1
-pyogrio
+pyogrio>=0.7.0
 shapely>=2.0.0
